@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style type="text/css">
+    body {
+      background-color: #789; margin: 0;
+      padding: 0; font: 14px Helvetica, Arial, sans-serif;
+    }
+    div.content {
+        width: 800px; height:600px;margin: 2em auto; padding: 20px 50px;
+        background-color: #fff; border-radius: 1em;
+    }
+    #messages {
+      border: 2px solid #fec; border-radius: 0em;
+      height: 30em; overflow: scroll; padding: 0.5em 1em;
+    }
+    #send_input{
+        width:650px;
+    }
+    a:link, a:visited { color: #69c; text-decoration: none; }
+    @media (max-width: 700px) {
+      body { background-color: #fff; }
+      div.content {
+        width: auto; margin: 0 auto; border-radius: 0;
+        padding: 1em;
+      }
+    }
+    #info{
+        animation:change 10s linear 0s infinite;font-size:15px;font-weight:60;
+    }
+    #user_name{
+        animation:change 5s linear 0s infinite;font-size:12px;font-weight:50;
+    }
+    @keyframes change{
+        0%   {color:#333;}
+        25%  {color:#ff0;}
+        50%  {color:#f60;}
+        75%  {color:#cf0;}
+        100% {color:#f00;}
+    }
+</style>
+
+<script language="javascript" type="text/javascript">
+
+    function GetCookie(name){
+        var str_cookie = document.cookie;
+        alert(str_cookie);
+        var arr_cookie = str_cookie.split("; ");
+        for (var i = 0; i < arr_cookie.length; i++){
+            var arr = arr_cookie[i].split("=");
+            if(name == arr[0]){
+                return arr[1];
+            }
+        }
+
+        return "匿名";
+    }
+
+  var rooms = [];
+  var ws = new WebSocket('ws://' + location.host + '/ws');
+
+  if (!window.console) { window.console = { log: function() {} } };
+
+  ws.onopen = function(ev)  { console.log(ev); };
+  ws.onerror = function(ev) { console.log(ev); };
+  ws.onclose = function(ev) { console.log(ev); };
+  ws.onmessage = function(ev) {
+    console.log(ev);
+    var div = document.createElement('div');
+    div.innerHTML = ev.data;
+    document.getElementById('messages').appendChild(div);
+
+  };
+
+  window.onload = function() {
+    document.getElementById('send_button').onclick = function(ev) {
+      var msg = document.getElementById('send_input').value;
+      var name = GetCookie("im_name");
+      var message = "<p id=\"user_name\">"
+      message += name;
+      message += "</p>";
+      message += "<p id=\"info\">    ";
+      message += msg;
+      message += "</p>";
+//      alert(message);
+      document.getElementById('send_input').value = '';
+      ws.send(message);
+    };
+    document.getElementById('send_input').onkeypress = function(ev) {
+      if (ev.keyCode == 13 || ev.which == 13) {
+        document.getElementById('send_button').click();
+      }
+    };
+  };
+</script>
+</head>
+<body>
+  <div class="content">
+    <h1>欢迎来到我的IM聊天室</h1>
+
+    <p>
+    </p>
+
+    <div id="messages">
+    </div>
+
+    <p>
+      <input type="text" id="send_input" />
+      <button id="send_button"> 发送 </button>
+      <button id="quit_button"> 退出 </button>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!--
+	Author: W3layouts
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>登录和注册响应式</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!--<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+-->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Sign In And Sign Up Forms  Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+	</script><script src="js/jquery.min.js"></script>
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script> 
+ <script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+</script>	
+		
+</head>
+<body>
+	<h1>登录注册表单</h1>
+	<div class="w3layouts">
+		<div class="signin-agile">
+			<h2>登录
+</h2>
+			<form action="#" method="post" onsubmit="return false">
+				<input type="text" id="name" class="name" placeholder="用户名" required="">
+				<input type="password" id="password" class="password" placeholder="密码" required="">
+				<ul>
+					<li>
+						<input type="checkbox" id="brand1" value="">
+						<label for="brand1"><span></span>记住密码</label>
+					</li>
+				</ul>
+				<a href="#">忘记密码?</a><br>
+				<div class="clear"></div>
+				<input type="submit" value="登录" onclick="login()">
+			</form>
+		</div>
+		<div class="signup-agileinfo">
+			<h3>期待你的加入...</h3>
+			<p>1.每天晚上睡觉前的辗转反侧，就是为了等你一句晚安</p>
+            <p>2.如果说陪伴是最长情的告白，那么我选择陪伴便是最深情的决定</p>
+            <p>3.当独自一人陷入孤独的时候，最希望得到的，既不是别人的关心...也不是别人的安慰...寂寞的时候最希望得到的，是能够交流心声的知己</p>
+			<div class="more">
+				<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog">点击注册</a>				
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer-w3l">
+		<p class="agileinfo"> 登录和注册表单  <a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+ </p>
+	</div>
+	<div class="pop-up"> 
+	<div id="small-dialog" class="mfp-hide book-form">
+		<h3>注册表单 </h3>
+			<form action="#" method="post" onsubmit="return false">
+				<input type="text" id="Name" placeholder="用户名" required=""/>
+				<input type="password" id="rPassword" class="password" placeholder="密码" required=""/>
+				<input type="password" id="rrPassword" class="password" placeholder="重复密码" required=""/>					
+				<input type="submit" value="点击注册" onclick="register()">
+			</form>
+	</div>
+</div>	
+<body>
+<script>
+
+    var user = document.getElementById("name");
+    var passwd = document.getElementById("password");
+
+    var ruser = document.getElementById("Name");
+    var rpasswd = document.getElementById("rPassword");
+    var rrpasswd = document.getElementById("rrPassword");
+
+    function login(){
+        $.ajax({
+            url: "/LH",
+            type: "POST",
+            data: JSON.stringify({
+                name: user.value,
+                passwd: passwd.value
+            }),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            success: function(data){
+                if (data.result == 1 ){
+                    alert("名字已经被占用，请更换名字再试!")
+                }
+                else if(data.result == 2){
+                    alert("请求方法错误!")
+                }
+                else{
+                    window.location.href='index.html'
+                }
+            },
+            error: function(e){
+                alert("请求失败，请稍后再试!")
+            }
+        });
+    }
+    function register(){
+        if(rpasswd.value != rrpasswd.value){
+            alert("两次密码不一致，请重新输入!")
+            return;
+        }
+        $.ajax({
+            url: "/RH",
+            type: "POST",
+            data: JSON.stringify({
+                name: ruser.value,
+                passwd: rpasswd.value
+            }),
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            success: function(data){
+                if (data.result == 1 ){
+                    alert("名字已经被占用，请更换名字再试!")
+                }
+                else if(data.result == 2){
+                    alert("请求方法错误!")
+                }
+                else{
+                    alert("注册成功，请直接登录!")
+                    window.location.href='login.html'
+                }
+            },
+            error: function(e){
+                alert("请求失败，请稍后再试!")
+            }
+        });
+
+    }
+</script>
+</html>
+
+
+
+
+
