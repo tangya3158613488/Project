@@ -1,0 +1,101 @@
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[0000000000aff8f8] dummy interface: using the dummy interface module...
+[0000000000ae2e78] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[00000000021e8918] dummy interface: using the dummy interface module...
+[00000000021cbe78] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[0000000001fc4918] dummy interface: using the dummy interface module...
+[0000000001fa7e78] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+Aborted by signal 中断...
+_error_code" : 0,
+	"err_detail" : "Params error.",
+	"err_msg" : "parameter error.",
+	"err_no" : 501,
+	"err_subcode" : 29,
+	"tts_logid" : 3098823408
+}
+
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[0000000001cbd918] dummy interface: using the dummy interface module...
+[0000000001ca0e78] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[00000000009d6918] dummy interface: using the dummy interface module...
+[00000000009b9e78] core playlist: end of playlist, exiting
+z, Mono
+recongize error
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+code error...
+response code error
+{
+	"curl_error_code" : 0,
+	"err_detail" : "Params error.",
+	"err_msg" : "parameter error.",
+	"err_no" : 501,
+	"err_subcode" : 29,
+	"tts_logid" : 853274985
+}
+
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+recongize error
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+recongize error
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+Aborted by signal 中断...
+autolaunch a dbus-daemon without a $DISPLAY for X11
+[00000000017f16b8] core interface error: no suitable interface module
+[00000000016f7168] core libvlc error: interface "dbus,none" initialization failed
+[00000000017f16b8] dummy interface: using the dummy interface module...
+[00000000017e2e68] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+Aborted by signal Interrupt...
+ce error: no suitable interface module
+[000000000125b168] core libvlc error: interface "globalhotkeys,none" initialization failed
+[00000000013556b8] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[00000000013556b8] core interface error: no suitable interface module
+[000000000125b168] core libvlc error: interface "dbus,none" initialization failed
+[00000000013556b8] dummy interface: using the dummy interface module...
+[0000000001346e68] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+response code error
+{
+	"curl_error_code" : 0,
+	"err_detail" : "Params error.",
+	"err_msg" : "parameter error.",
+	"err_no" : 501,
+	"err_subcode" : 29,
+	"tts_logid" : 635980538
+}
+
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[0000000000ba76b8] core interface error: no suitable interface module
+[0000000000aad168] core libvlc error: interface "globalhotkeys,none" initialization failed
+[0000000000ba76b8] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0000000000ba76b8] core interface error: no suitable interface module
+[0000000000aad168] core libvlc error: interface "dbus,none" initialization failed
+[0000000000ba76b8] dummy interface: using the dummy interface module...
+[0000000000b98e68] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[0000000001e806b8] core interface error: no suitable interface module
+[0000000001d86168] core libvlc error: interface "globalhotkeys,none" initialization failed
+[0000000001e806b8] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[0000000001e806b8] core interface error: no suitable interface module
+[0000000001d86168] core libvlc error: interface "dbus,none" initialization failed
+[0000000001e806b8] dummy interface: using the dummy interface module...
+[0000000001e71e68] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[00000000007ec6b8] core interface error: no suitable interface module
+[00000000006f2168] core libvlc error: interface "globalhotkeys,none" initialization failed
+[00000000007ec6b8] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[00000000007ec6b8] core interface error: no suitable interface module
+[00000000006f2168] core libvlc error: interface "dbus,none" initialization failed
+[00000000007ec6b8] dummy interface: using the dummy interface module...
+[00000000007dde68] core playlist: end of playlist, exiting
+Recording WAVE 'temp_file/asr.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+[00000000010246b8] core interface error: no suitable interface module
+[0000000000f2a168] core libvlc error: interface "globalhotkeys,none" initialization failed
+[00000000010246b8] dbus interface error: Failed to connect to the D-Bus session daemon: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[00000000010246b8] core interface error: no suitable interface module
+[0000000000f2a168] core libvlc error: interface "dbus,none" initialization failed
+[00000000010246b8] dummy interface: using the dummy interface module...

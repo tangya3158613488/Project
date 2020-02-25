@@ -1,0 +1,6 @@
+查看当前目录：ls -l
+关闭防火墙:systemctl stop firewalld
+打开防火墙:systemctl start firewalld
+跑火车:sl
+查看黑名单:cat black_name.txt
+
